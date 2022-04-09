@@ -2,9 +2,11 @@
 #define __UART_H_
 
 #include "stm32f10x.h"
+extern u8 MoveFlag;
 
 void USART3Conf(u32 baudRate);
 void PutChar(u8 Data);
 void PutNChar(u8 *buf , u16 size);
 void PutStr(char *str);
+void USART3_IRQHandler();
 #endif

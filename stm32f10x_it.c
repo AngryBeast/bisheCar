@@ -191,19 +191,19 @@ void TIM2_IRQHandler(void)
   * @param  None
   * @retval None
   */
-void USART3_IRQHandler(void)
-{
-	unsigned char rec_data;
-  if(USART_GetITStatus(USART3, USART_IT_RXNE) != RESET)
-  {
-		USART_ClearITPendingBit(USART3, USART_IT_RXNE);
-    /* Read one byte from the receive data register */
-    rec_data = USART_ReceiveData(USART3);
-		bt_rec_flag = 1;
-		ctrl_comm = rec_data;
-		continue_time = 40;
-  }
-}
+//void USART3_IRQHandler(void)
+//{
+//	unsigned char rec_data;
+//  if(USART_GetITStatus(USART3, USART_IT_RXNE) != RESET)
+//  {
+//		USART_ClearITPendingBit(USART3, USART_IT_RXNE);
+//    /* Read one byte from the receive data register */
+//    rec_data = USART_ReceiveData(USART3);
+//		bt_rec_flag = 1;
+//		ctrl_comm = rec_data;
+//		continue_time = 40;
+//  }
+//}
 
 /**
   * @brief  This function handles PPP interrupt request.

@@ -3,6 +3,14 @@
 
 //UART function
 //UART3 TxD GPIOB10   RxD GPIOB11
+
+
+
+#define Max_BUFF_Len 50
+unsigned char Uart3_Buffer[Max_BUFF_Len];
+unsigned int Uart3_Rx=0;
+u8 MoveFlag;
+
 void USART3Conf(u32 baudRate)
 {
 	NVIC_InitTypeDef 	NVIC_InitStruct;//定义一个设置中断的结构体	
@@ -66,6 +74,49 @@ void PutNChar(u8 *buf , u16 size)
 	{
 		 USART_SendData(USART3 , buf[i]);
 		 while (USART_GetFlagStatus(USART3, USART_FLAG_TC) == RESET);//等待发送完毕
+	}
+}
+
+
+void USART3_IRQHandler()
+{
+	if(USART_GetITStatus(USART3,USART_IT_RXNE) != RESET) //中断产生 
+	{
+		USART_ClearITPendingBit(USART3,USART_IT_RXNE); //清除中断标志
+			 
+		Uart3_Buffer[Uart3_Rx] = USART_ReceiveData(USART3);     //接收串口1数据到buff缓冲区
+		Uart3_Rx++; 
+     		 
+		if(Uart3_Buffer[Uart3_Rx-1] == 0x0a || Uart3_Rx == Max_BUFF_Len)    //如果接收到尾标识是换行符（或者等于最大接受数就清空重新接收）
+		{
+			if(Uart3_Buffer[0] == 'A')                      //检测到头标识是我们需要的 
+			{
+				//printf("%s\r\n",Uart3_Buffer);        //这里我做打印数据处理
+				EXTI_InitTypeDef EXTI_InitStructure;
+				EXTI_InitStructure.EXTI_LineCmd = DISABLE;
+				EXTI_Init(&EXTI_InitStructure);
+
+
+				switch (Uart3_Buffer[1])
+				{
+					case 'G':
+					case 'B':
+					case 'L':
+					case 'R':
+					case 'S':
+						MoveFlag = Uart3_Buffer[1];
+						break;
+				}
+				Uart3_Rx=0;   
+
+				EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+				EXTI_Init(&EXTI_InitStructure);				
+			} 
+			else
+			{
+				Uart3_Rx=0;                                   //不是我们需要的数据或者达到最大接收数则开始重新接收
+			}
+		}
 	}
 }
 

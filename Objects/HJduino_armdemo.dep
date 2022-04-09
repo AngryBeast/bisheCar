@@ -1,6 +1,6 @@
 Dependencies for Project 'HJduino', Target 'armdemo': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (.\main.c)(0x58AD9DAD)(-c --cpu Cortex-M3 -g -O2 --apcs=interwork --split_sections --signed_chars -I .\CMSIS -I .\StdPeriph_Driver\inc -I .\StdPeriph_Driver\src -I .\-ID:\codeSoftware\keil5_arm\packet\Keil\STM32F1xx_DFP\2.3.0\Device\Include-ID:\codeSoftware\keil5_arm\packet\Keil\STM32F1xx_DFP\2.3.0-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x62518D3B)(-c --cpu Cortex-M3 -g -O2 --apcs=interwork --split_sections --signed_chars -I .\CMSIS -I .\StdPeriph_Driver\inc -I .\StdPeriph_Driver\src -I .\-ID:\codeSoftware\keil5_arm\packet\Keil\STM32F1xx_DFP\2.3.0\Device\Include-ID:\codeSoftware\keil5_arm\packet\Keil\STM32F1xx_DFP\2.3.0-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (.\CMSIS\stm32f10x.h)(0x4F55FF49)
 I (.\CMSIS\core_cm3.h)(0x4BD10894)
 I (D:\codeSoftware\keil5_arm\ARM\ARMCC\include\stdint.h)(0x6025237E)
@@ -18,8 +18,8 @@ I (interface.h)(0x58AD9DD0)
 I (LCD1602.h)(0x56598088)
 I (IRCtrol.h)(0x55F023EC)
 I (motor.h)(0x55F101E9)
-I (uart.h)(0x563B299F)
-F (.\stm32f10x_it.c)(0x563B2970)(-c --cpu Cortex-M3 -g -O2 --apcs=interwork --split_sections --signed_chars -I .\CMSIS -I .\StdPeriph_Driver\inc -I .\StdPeriph_Driver\src -I .\-ID:\codeSoftware\keil5_arm\packet\Keil\STM32F1xx_DFP\2.3.0\Device\Include-ID:\codeSoftware\keil5_arm\packet\Keil\STM32F1xx_DFP\2.3.0-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\objects\stm32f10x_it.o --omf_browse .\objects\stm32f10x_it.crf --depend .\objects\stm32f10x_it.d)
+I (uart.h)(0x62518E52)
+F (.\stm32f10x_it.c)(0x62518E52)(-c --cpu Cortex-M3 -g -O2 --apcs=interwork --split_sections --signed_chars -I .\CMSIS -I .\StdPeriph_Driver\inc -I .\StdPeriph_Driver\src -I .\-ID:\codeSoftware\keil5_arm\packet\Keil\STM32F1xx_DFP\2.3.0\Device\Include-ID:\codeSoftware\keil5_arm\packet\Keil\STM32F1xx_DFP\2.3.0-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\objects\stm32f10x_it.o --omf_browse .\objects\stm32f10x_it.crf --depend .\objects\stm32f10x_it.d)
 I (stm32f10x_it.h)(0x4BD1091A)
 I (.\CMSIS\stm32f10x.h)(0x4F55FF49)
 I (.\CMSIS\core_cm3.h)(0x4BD10894)
@@ -37,8 +37,8 @@ I (.\StdPeriph_Driver\inc\misc.h)(0x4BD1086A)
 I (interface.h)(0x58AD9DD0)
 I (IRCtrol.h)(0x55F023EC)
 I (motor.h)(0x55F101E9)
-F (.\uart.c)(0x56DD44FC)(-c --cpu Cortex-M3 -g -O2 --apcs=interwork --split_sections --signed_chars -I .\CMSIS -I .\StdPeriph_Driver\inc -I .\StdPeriph_Driver\src -I .\-ID:\codeSoftware\keil5_arm\packet\Keil\STM32F1xx_DFP\2.3.0\Device\Include-ID:\codeSoftware\keil5_arm\packet\Keil\STM32F1xx_DFP\2.3.0-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
-I (uart.h)(0x563B299F)
+F (.\uart.c)(0x62518D1B)(-c --cpu Cortex-M3 -g -O2 --apcs=interwork --split_sections --signed_chars -I .\CMSIS -I .\StdPeriph_Driver\inc -I .\StdPeriph_Driver\src -I .\-ID:\codeSoftware\keil5_arm\packet\Keil\STM32F1xx_DFP\2.3.0\Device\Include-ID:\codeSoftware\keil5_arm\packet\Keil\STM32F1xx_DFP\2.3.0-D__UVISION_VERSION="536" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+I (uart.h)(0x62518E52)
 I (.\CMSIS\stm32f10x.h)(0x4F55FF49)
 I (.\CMSIS\core_cm3.h)(0x4BD10894)
 I (D:\codeSoftware\keil5_arm\ARM\ARMCC\include\stdint.h)(0x6025237E)
